@@ -4,14 +4,43 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Rayhan is a frontend developer building responsive, user-friendly web interfaces using HTML, CSS, JavaScript, and React." />
 
+    <!-- Open Graph -->
+    <meta property="og:title" content="Rayhan | Frontend Developer" />
+    <meta property="og:description"
+        content="Frontend Developer building responsive, user-friendly web interfaces using HTML, CSS, JavaScript, React, and Next.js." />
+    <meta property="og:image" content="https://developer-rayhan.netlify.app/assets/image/me2.png" />
+    <meta property="og:url" content="https://developer-rayhan.netlify.app" />
+    <meta property="og:type" content="website" />
+
+    <!-- twitter card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Rayhan | Frontend Developer" />
+    <meta name="twitter:description" content="Frontend Developer building modern, responsive web interfaces." />
+    <meta name="twitter:image" content="https://developer-rayhan.netlify.app/assets/image/me2.png" />
+
+    <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
     <link
-        href="https://fonts.googleapis.com/css2?family=Handjet:wght,ELGR,ELSH@100..900,1..2,0..16&Cinzel:wght@400..900&family=Playwrite+DE+Grund:wght@100..400&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&family=Protest+Guerrilla&family=Italiana&family=Roboto+Flex:opsz,wght@8..144,100..1000&&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Roboto:opsz,wght@8..144,100..1000&&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
         rel="stylesheet">
 
+    <!-- site favicon -->
+    <link rel="icon" href="public/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="public/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="public/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="public/favicon-16x16.png" />
 
+
+    <!-- to avoid duplicate content issues -->
+    <link rel="canonical" href="https://developer-rayhan.netlify.app/" />
+
+
+    <!-- Stylesheet -->
     <link rel="stylesheet" href="index.css">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="click-animation/clickAnimation.css">
@@ -19,10 +48,25 @@
     <link rel="stylesheet" href="bubble-animation/bubble.css">
     <link rel="stylesheet" href="media-queries.css">
 
-    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/lottie-web/5.12.0/lottie.min.js"></script> -->
     <script src="https://unpkg.com/@dotlottie/player-component@2.7.12/dist/dotlottie-player.mjs" type="module"></script>
 
-    <title>This is a portfolio webpage for Web Developer</title>
+    <!-- Structured Data (Schema) — for SEO -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Rayhan",
+      "jobTitle": "Frontend Developer",
+      "url": "https://developer-rayhan.netlify.app",
+      "sameAs": [
+        "https://github.com/rayhan5497"
+      ]
+    }
+    </script>
+
+
+
+    <title>Rayhan | Frontend Developer</title>
 
 </head>
 
@@ -52,19 +96,19 @@
                     <nav class="navManu">
                         <ul class="dodum-font navUl1">
                             <li data-name="projects">
-                                <img src="assets/image/icons/project-icon.webp" alt="">
+                                <img src="assets/image/icons/project-icon.webp" alt="Projects">
                             </li>
                             <li data-name="tools">
-                                <img src="assets/image/icons/tool-icon.webp" alt="">
+                                <img src="assets/image/icons/tool-icon.webp" alt="Tools">
                             </li>
                             <li data-name="service">
-                                <img src="assets/image/icons/service-icon.webp" alt="">
+                                <img src="assets/image/icons/service-icon.webp" alt="Services">
                             </li>
                             <li data-name="about">
-                                <img src="assets/image/icons/about-icon.webp" alt="">
+                                <img src="assets/image/icons/about-icon.webp" alt="About">
                             </li>
                             <li data-name="connect">
-                                <img src="assets/image/icons/connect-icon.webp" alt="">
+                                <img src="assets/image/icons/connect-icon.webp" alt="Connect">
                             </li>
                         </ul>
                         <ul class="dodum-font navUl2">
@@ -95,11 +139,9 @@
                     <div class="dodum-font headLineParagraph">
                         <p class="margin"> <span>Hi, </span>I am <span class="font-color">Rayhan</span></p>
                         <p class="margin"><span class="font-color">a </span><span class="typewrite"></span></p>
-                        <p>I build clean, responsive layouts with
-                            HTML, CSS, and JavaScript, and enjoy adding those small design touches that make people go
-                            “Wow,
-                            that feels nice.”
-                            Let’s make the web a little more beautiful and a lot more usable.</p>
+                        <p>I build modern, responsive interfaces using HTML, CSS, and JavaScript,
+                        focusing on clean layouts, smooth interactions, and thoughtful details
+                        that make products feel intuitive and enjoyable to use.</p>
                     </div>
                 </div>
                 <div class="imgAndBottomLine">
@@ -110,19 +152,23 @@
                         </dotlottie-player>
                         <picture>
                             <source srcset="assets/image/my-photos/me2.avif" type="image/avif">
-                            <img src="assets/image/my-photos/me2.png" alt="My Image">
+                            <img src="assets/image/my-photos/me2.png" alt="Developer's photo">
                         </picture>
                         <div class="iconsContainer">
                             <a href="https://www.facebook.com/profile.php?id=100075233943710" target="_blank"
                                 rel="noopener noreferrer">
-                                <img class="headerIcons facebook" src="assets/image/logo/facebook-3d.webp" alt="">
+                                <img class="headerIcons facebook" src="assets/image/logo/facebook-3d.webp"
+                                    alt="facebook icon">
                             </a>
                             <a href="https://github.com/rayhan5497" target="_blank" rel="noopener noreferrer">
-                                <img class="headerIcons github" src="assets/image/logo/github-3d.webp" alt="">
+                                <img class="headerIcons github" src="assets/image/logo/github-3d.webp"
+                                    alt="github icon">
                             </a>
-                            <img class="headerIcons linkdin" src="assets/image/logo/linkedin-3d.webp" alt="">
+                            <img class="headerIcons linkdin" src="assets/image/logo/linkedin-3d.webp"
+                                alt="linkedin icon">
                             <a href="http://wa.me/+8801639638879" target="_blank" rel="noopener noreferrer">
-                                <img class="headerIcons whatsapp" src="assets/image/logo/whatsapp-3d.webp" alt="">
+                                <img class="headerIcons whatsapp" src="assets/image/logo/whatsapp-3d.webp"
+                                    alt="whatsapp icon">
                             </a>
                         </div>
                     </div>
@@ -139,93 +185,99 @@
         <div class="mainAndFooter">
             <div class="mainBoxContainer">
                 <main class="mainBox">
-                    <div id="projects">
+                    <section id="projects">
                         <div class="projectContainer">
-                            <h1>MY RECENT PROJECTS</h1>
+                            <h2>MY RECENT PROJECTS</h2>
                             <div class="screenShots">
                                 <div class="card card1">
                                     <p>Live Cricket Score</p>
-                                    <img src="assets/image/screenshots/live-match.webp" alt="" class="project">
+                                    <img src="assets/image/screenshots/live-match.webp"
+                                        alt="Live cricket score web application interface" class="project">
                                     <div class="buttonContainer">
                                         <a href="https://github.com/rayhan5497/live-cricket-score" target="_blank"
                                             rel="noopener noreferrer">
                                             <button class="viewSource" data-name="Source Code"><img
-                                                    src="assets/image/icons/code-icon.webp" alt=""></button>
+                                                    src="assets/image/icons/code-icon.webp"></button>
                                         </a>
                                         <a href="https://live-cricket-score-five.vercel.app/" target="_blank"
                                             rel="noopener noreferrer">
                                             <button class="viewDemo" data-name="Live Demo"><img
-                                                    src="assets/image/icons/eye-icon.webp" alt=""></button>
+                                                    src="assets/image/icons/eye-icon.webp"></button>
                                         </a>
                                     </div>
                                 </div>
                                 <div class="card card2">
                                     <p>Promodoro Timer</p>
-                                    <img src="assets/image/screenshots/promodoro-timer.webp" alt="" class="project">
+                                    <img src="assets/image/screenshots/promodoro-timer.webp"
+                                        alt="Promodoro timer web application interface" class="project">
                                     <div class="buttonContainer">
                                         <a href="https://github.com/rayhan5497/promodoro-timer-app" target="_blank"
                                             rel="noopener noreferrer">
                                             <button class="viewSource" data-name="Source Code"><img
-                                                    src="assets/image/icons/code-icon.webp" alt=""></button>
+                                                    src="assets/image/icons/code-icon.webp"></button>
                                         </a>
                                         <a href="https://rayhan5497.github.io/promodoro-timer-app/" target="_blank"
                                             rel="noopener noreferrer">
                                             <button class="viewDemo" data-name="Live Demo"><img
-                                                    src="assets/image/icons/eye-icon.webp" alt=""></button>
+                                                    src="assets/image/icons/eye-icon.webp"></button>
                                         </a>
                                     </div>
                                 </div>
                                 <div class="card card3">
                                     <p>Documentation</p>
-                                    <img src="assets/image/screenshots/documentation.webp" alt="" class="project">
+                                    <img src="assets/image/screenshots/documentation.webp"
+                                        alt="Documentation web application interface" class="project">
                                     <div class="buttonContainer">
                                         <a href="https://github.com/rayhan5497/documentation-app" target="_blank"
                                             rel="noopener noreferrer">
                                             <button class="viewSource" data-name="Source Code"><img
-                                                    src="assets/image/icons/code-icon.webp" alt=""></button>
+                                                    src="assets/image/icons/code-icon.webp"></button>
                                         </a>
                                         <a href="https://rayhan5497.github.io/documentation-app/" target="_blank"
                                             rel="noopener noreferrer">
                                             <button class="viewDemo" data-name="Live Demo"><img
-                                                    src="assets/image/icons/eye-icon.webp" alt=""></button>
+                                                    src="assets/image/icons/eye-icon.webp"></button>
                                         </a>
                                     </div>
                                 </div>
                                 <div class="card card4">
                                     <p>Weather</p>
-                                    <img src="assets/image/screenshots/weather-app.webp" alt="" class="project">
+                                    <img src="assets/image/screenshots/weather-app.webp"
+                                        alt="Weather web application interface" class="project">
                                     <div class="buttonContainer">
                                         <button class="viewSource" data-name="Source Code"><img
-                                                src="assets/image/icons/code-icon.webp" alt=""></button>
+                                                src="assets/image/icons/code-icon.webp"></button>
                                         <button class="viewDemo" data-name="Live Demo"><img
-                                                src="assets/image/icons/eye-icon.webp" alt=""></button>
+                                                src="assets/image/icons/eye-icon.webp"></button>
                                     </div>
                                 </div>
                                 <div class="card card5">
                                     <p>Burger Shop UI</p>
-                                    <img src="assets/image/screenshots/burger-bliss.webp" alt="" class="project">
+                                    <img src="assets/image/screenshots/burger-bliss.webp"
+                                        alt="Burger Shop web application interface" class="project">
                                     <div class="buttonContainer">
                                         <button class="viewSource" data-name="Source Code"><img
-                                                src="assets/image/icons/code-icon.webp" alt=""></button>
+                                                src="assets/image/icons/code-icon.webp"></button>
                                         <button class="viewDemo" data-name="Live Demo"><img
-                                                src="assets/image/icons/eye-icon.webp" alt=""></button>
+                                                src="assets/image/icons/eye-icon.webp"></button>
                                     </div>
                                 </div>
                                 <div class="card card6">
                                     <p>To Do List</p>
-                                    <img src="assets/image/screenshots/todo-list-app.webp" alt="" class="project">
+                                    <img src="assets/image/screenshots/todo-list-app.webp"
+                                        alt="To do list web application interface" class="project">
                                     <div class="buttonContainer">
                                         <button class="viewSource" data-name="Source Code"><img
-                                                src="assets/image/icons/code-icon.webp" alt=""></button>
+                                                src="assets/image/icons/code-icon.webp"></button>
                                         <button class="viewDemo" data-name="Live Demo"><img
-                                                src="assets/image/icons/eye-icon.webp" alt=""></button>
+                                                src="assets/image/icons/eye-icon.webp"></button>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
-                    <div id="tools">
-                        <h1>TOOLS I USE</h1>
+                    </section>
+                    <section id="tools">
+                        <h2>TOOLS I USE</h2>
                         <div class="toolsNav">
                             <button class="all" data-name="all">All</button>
                             <button class="language" data-name="language">Language</button>
@@ -233,114 +285,116 @@
                             <button class="other" data-name="other">Other Tools</button>
                         </div>
                         <div class="toolsContainer">
-                            <div class="tool" data-name="language"> HTML <img src="assets/image/logo/html.webp" alt="">
+                            <div class="tool" data-name="language"> HTML <img src="assets/image/logo/html.webp"
+                                    alt="html icon">
                             </div>
-                            <div class="tool" data-name="language">CSS <img src="assets/image/logo/css.webp" alt="">
+                            <div class="tool" data-name="language">CSS <img src="assets/image/logo/css.webp"
+                                    alt="css icon">
                             </div>
                             <div class="tool" data-name="language">JavaScript <img src="assets/image/logo/js.webp"
-                                    alt="">
+                                    alt="javascript icon">
                             </div>
-                            <div class="tool" data-name="framework">React <img src="assets/image/logo/react.webp" alt="">
+                            <div class="tool" data-name="framework">React <img src="assets/image/logo/react.webp"
+                                    alt="react icon">
                             </div>
                             <div class="tool" data-name="framework">Next.js <img src="assets/image/logo/nextjs.webp"
-                                    alt=""></div>
+                                    alt="next.js icon"></div>
                             <div class="tool" data-name="framework">Tailwind <img src="assets/image/logo/tailwind.webp"
-                                    alt=""></div>
-                            <div class="tool" data-name="other">VS Code <img src="assets/image/logo/vscode.webp" alt="">
+                                    alt="tailwind icon"></div>
+                            <div class="tool" data-name="other">VS Code <img src="assets/image/logo/vscode.webp"
+                                    alt="vscode icon">
                             </div>
-                            <div class="tool" data-name="other">Git <img src="assets/image/logo/git.webp" alt=""></div>
-                            <div class="tool" data-name="other">Github <img src="assets/image/logo/github.webp" alt="">
+                            <div class="tool" data-name="other">Git <img src="assets/image/logo/git.webp"
+                                    alt="git icon"></div>
+                            <div class="tool" data-name="other">Github <img src="assets/image/logo/github.webp"
+                                    alt="github icon">
                             </div>
                         </div>
-                    </div>
-                    <div id="service">
-                        <h1>Service I Provide</h1>
+                    </section>
+                    <section id="service">
+                        <h2>Service I Provide</h2>
                         <div class="mainVideoPair professional">
-                            <h2>
+                            <h3>
                                 USER FRIENDLY <br> INTERFACE
-                            </h2>
+                            </h3>
                             <dotlottie-player
                                 src="https://lottie.host/388225b6-6dba-4ee3-b2ff-4b6de8ad85f6/Bw0KaTqHTe.lottie"
                                 background="transparent" speed="1" loop autoplay></dotlottie-player>
                         </div>
                         <div class="mainVideoPair upToDateDesign">
-                            <h2>
+                            <h3>
                                 MODERN <br> LOOK
-                            </h2>
+                            </h3>
                             <dotlottie-player
                                 src="https://lottie.host/66c43371-5f64-4b01-92c3-c551ce32ccbd/wFpjiXsFPj.lottie"
                                 background="transparent" speed="1" loop autoplay></dotlottie-player>
                         </div>
                         <div class="mainVideoPair responsiveAndSecure">
-                            <h2>
+                            <h3>
                                 RESPONSIVE <br> AND SECURE DESIGN
-                            </h2>
+                            </h3>
                             <dotlottie-player
                                 src="https://lottie.host/d291622c-ec03-475b-8ab7-9b85989645e5/4IdyULfyjH.lottie"
                                 background="transparent" speed="1" loop autoplay></dotlottie-player>
                             <!-- <div class="lottie lottie-responsive"></div> -->
                         </div>
-                    </div>
-                    <div id="about">
+                    </section>
+                    <section id="about">
                         <div class="aboutHeaderContainer">
-                            <h1>ABOUT ME</h1>
-                            <h2>A little more about what I do</h2>
+                            <h2>ABOUT ME</h2>
+                            <h3>A little more about what I do</h3>
                         </div>
                         <div class="aboutDetailsContainer">
                             <div class="aboutDetails">
-                                <h3>Who I Am</h3>
+                                <h4>Who I Am</h4>
                                 <p>
-                                    I am a Self taught, Passionate and results-driven Frontend Developer with a strong
-                                    foundation in
-                                    HTML,
-                                    CSS, and JavaScript, and a growing skillset in building user-centric, responsive web
-                                    applications. I enjoy transforming creative ideas into functional interfaces and
-                                    have
-                                    hands-on experience developing small to mid-scale projects that emphasize clean
-                                    design and
-                                    smooth user experience.
-
-                                    I specialize in creating engaging UIs and
-                                    optimizing frontend performance. I’m always eager to learn new technologies,
-                                    frameworks, and
-                                    design patterns, and I thrive in collaborative environments that challenge me to
-                                    grow as a
-                                    developer.
+                                    I’m a self-taught Frontend Developer with a strong foundation in HTML, CSS,
+                                    and JavaScript, focused on building responsive and user-centric web
+                                    interfaces. I enjoy turning ideas and designs into functional, accessible,
+                                    and visually clean experiences.
+                                
+                                    I’ve worked on small to mid-scale projects where I emphasized performance,
+                                    usability, and maintainable code. I’m continuously improving my skills,
+                                    exploring modern frontend practices, and learning how to build interfaces
+                                    that not only look good but feel smooth and intuitive to use.
+                                
+                                    I enjoy collaborating, learning from feedback, and growing as a developer
+                                    with every project I build.
                                 </p>
                             </div>
                             <div class="aboutSpecialization">
-                                <h3 class="specialized">I Specialized In</h3>
+                                <h4 class="specialized">I Specialized In</h4>
                                 <div class="card">
                                     <div class="tool"><span>HTML</span>
-                                        <img src="assets/image/logo/html.webp" alt="">
+                                        <img src="assets/image/logo/html.webp" alt="html icon">
 
                                     </div>
                                     <div class="tool"><Span>CSS</Span>
 
-                                        <img src="assets/image/logo/css.webp" alt="">
+                                        <img src="assets/image/logo/css.webp" alt="css icon">
                                     </div>
                                     <div class="tool"><span>JavaScript</span>
-                                        <img src="assets/image/logo/js.webp" alt="">
+                                        <img src="assets/image/logo/js.webp" alt="javascript icon">
 
                                     </div>
                                     <div class="tool"><span>Tailwind</span>
-                                        <img src="assets/image/logo/tailwind.webp" alt="">
+                                        <img src="assets/image/logo/tailwind.webp" alt="tailwind icon">
 
                                     </div>
                                     <div class="tool"><span>React</span>
-                                        <img src="assets/image/logo/react.webp" alt="">
+                                        <img src="assets/image/logo/react.webp" alt="react icon">
 
                                     </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
-                    <div id="connect">
-                        <h1>LET'S WORK TOGETHER</h1>
-                        <h2>Have a project in mind or want to collaborate? I'd love to hear from you!</h2>
+                    </section>
+                    <section id="connect">
+                        <h2>LET'S WORK TOGETHER</h2>
+                        <h3>Have a project in mind or want to collaborate? I'd love to hear from you!</h3>
                         <div class="formAndLinks">
                             <form action="https://formspree.io/f/xqabkazw" method="POST" class="form">
-                                <h3>Send me a message</h3>
+                                <h4>Send me a message</h4>
                                 <p>Fill out the form below and I'll get back to you as soon as possible.</p>
 
                                 <div class="formContainer">
@@ -361,52 +415,52 @@
 
                             </form>
                             <div class="connectLinks">
-                                <h3>Connect with me</h3>
+                                <h4>Connect with me</h4>
                                 <p>You can also reach out to me directly through these channels.</p>
                                 <a class="github" href="https://github.com/rayhan5497" target="_blank"
                                     rel="noopener noreferrer">
                                     <div class="iconContainer">
-                                        <img src="assets/image/logo/github.webp" alt="">
+                                        <img src="assets/image/logo/github.webp" alt="github icon">
                                     </div>
                                     <div class="nameContainer">
-                                        <h3>Github</h3>
+                                        <h4>Github</h4>
                                         <p>github.com/rayhan5497</p>
                                     </div>
                                 </a>
                                 <a class="linkedin">
                                     <div class="iconContainer">
-                                        <img src="assets/image/logo/linkedin.webp" alt="">
+                                        <img src="assets/image/logo/linkedin.webp" alt="linkedin icon">
                                     </div>
                                     <div class="nameContainer">
-                                        <h3>LinkedIn</h3>
+                                        <h4>LinkedIn</h4>
                                         <p>linkedin.com/rayhan5497</p>
                                     </div>
                                 </a>
                                 <a class="email" href="mailto:raihan5497681@gmail.com">
                                     <div class="iconContainer">
-                                        <img src="assets/image/icons/email-icon.webp" alt="">
+                                        <img src="assets/image/icons/email-icon.webp" alt="email icon">
                                     </div>
                                     <div class="nameContainer">
-                                        <h3>Email</h3>
+                                        <h4>Email</h4>
                                         <p>raihan5497681@gmail.com</p>
                                     </div>
                                 </a>
                                 <a class="phone" href="tel:+8801639638879">
                                     <div class="iconContainer">
-                                        <img src="assets/image/icons/phone-icon.webp" alt="">
+                                        <img src="assets/image/icons/phone-icon.webp" alt="call icon">
                                     </div>
                                     <div class="nameContainer">
-                                        <h3>Phone</h3>
+                                        <h4>Phone</h4>
                                         <p>+8801639638879</p>
                                     </div>
                                 </a>
                             </div>
                         </div>
                         <div class="thank-message">
-                            <h2>Thank You</h2>
+                            <h3>Thank You</h3>
                             <p>Your message has been sent successfully. I'll get back to you soon.</p>
                         </div>
-                    </div>
+                    </section>
                 </main>
             </div>
 
@@ -415,7 +469,7 @@
 
                 <div class="contactElementBox">
                     <div class="marketPlace">
-                        <h3>Market Place</h3>
+                        <h4>Market Place</h4>
                         <div class="contactElement">
                             <p>Fiver</p>
                             <p>Upwork</p>
@@ -423,7 +477,7 @@
                     </div>
 
                     <div class="socialMedia">
-                        <h3>Social Media</h3>
+                        <h4>Social Media</h4>
                         <div class="contactElement">
                             <a href="https://www.facebook.com/profile.php?id=100075233943710" target="_blank"
                                 rel="noopener noreferrer">
@@ -436,7 +490,7 @@
                     </div>
 
                     <div class="contact">
-                        <h3>Contact</h3>
+                        <h4>Contact</h4>
                         <div class="contactElement">
                             <a href="mailto:raihan5497681@gmail.com">
                                 <p>
@@ -452,22 +506,6 @@
             </footer>
         </div>
     </div>
-
-    <!-- <script>
-        var animation = lottie.loadAnimation({
-            container: document.querySelector('.responsiveAndSecure'), // required
-            renderer: 'svg', // 'canvas' or 'html' also available
-            loop: true,
-            autoplay: true,
-            path: 'https://lottie.host/531feb19-d260-4573-9ade-2e288e9de166/KF1QBWa3Qe.json' // ✅ local or hosted .json file
-        });
-    </script> -->
-
-
-
-
-
-
 
 
     <script src="script.js"></script>

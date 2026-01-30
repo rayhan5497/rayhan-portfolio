@@ -179,14 +179,14 @@ document.addEventListener('DOMContentLoaded', function () {
 
   function showServiceSlide(index) {
     serviceSlides.forEach((slide, i) => {
-      const h2 = slide.querySelector('h2');
+      const h3 = slide.querySelector('h3');
       slide.style.width = i === index ? '80vw' : '0';
       slide.style.opacity = i === index ? '1' : '0';
       slide.style.zIndex = i === index ? '1' : '0';
       slide.style.fontSize = i === index ? '' : '0vw';
       slide.style.transform =
         i === index ? 'translateY(0px)' : 'translateY(0px)';
-      h2.style.fontSize = i === index ? '100%' : '0';
+      h3.style.fontSize = i === index ? '100%' : '0';
     });
     serviceSlideIndex = index;
     updateStarColors();

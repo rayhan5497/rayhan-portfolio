@@ -1,6 +1,7 @@
 /* ==== media queries =====*/
 
 @media (min-width: 1000px) {
+
   .imgAndBottomLine img {
     width: 450px;
   }
@@ -92,7 +93,7 @@
     font-size: 13px !important;
   } */
 
-  .aboutDetailsContainer h3 {
+  .aboutDetailsContainer h4 {
     font-size: 18px;
     opacity: 1;
     font-weight: 400;
@@ -119,7 +120,7 @@
     width: 50%;
   }
 
-  .mainBoxContainer h1 {
+  .mainBoxContainer h2 {
     font-size: 20px;
   }
 
@@ -135,7 +136,7 @@
     font-size: 13px;
   }
 
-  .mainBoxContainer h2 {
+  .mainBoxContainer h3 {
     text-align: center;
     font-size: 18px !important;
   }
@@ -177,8 +178,8 @@
     top: 25px;
   }
 
-  #about h2,
-  #connect h2 {
+  #about h3,
+  #connect h3 {
     margin: 0;
   }
 
@@ -590,6 +591,10 @@
 
 
 @media (max-width: 650px) {
+  .manuAndNavContainer {
+    scale: 0.7;
+  }
+
   .imgAndLottie>dotlottie-player {
     width: 340%;
   }
@@ -653,9 +658,9 @@
     justify-content: center;
   }
 
-  .marketPlace h3,
-  .socialMedia h3,
-  .contact h3 {
+  .marketPlace h4,
+  .socialMedia h4,
+  .contact h4 {
     letter-spacing: 0px;
     font-size: 13px;
     width: fit-content;
@@ -727,7 +732,7 @@
 }
 
 @media (max-width: 400px) {
-  .mainBoxContainer h1 {
+  .mainBoxContainer h2 {
     font-size: 25px;
   }
 
@@ -739,7 +744,7 @@
   }
 
   /*========ABOUT SECTION========*/
-  #about h2 {
+  #about h3 {
     margin: 0;
   }
 
@@ -755,7 +760,7 @@
   }
 
   /*========CONNECT SECTION========*/
-  #connect h2 {
+  #connect h3 {
     font-size: 14px;
     /* margin: 0 0 20px; */
   }

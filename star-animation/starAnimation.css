@@ -1,10 +1,3 @@
-.starContainer {
-  position: absolute;
-  height: 100vh;
-  width: 100vw;
-  pointer-events: none;
-}
-
 body {
   overflow-y: hidden;
   overflow-x: hidden;
@@ -14,6 +7,12 @@ html {
 }
 
 
+.starContainer {
+  position: absolute;
+  height: 100vh;
+  width: 100vw;
+  pointer-events: none;
+}
 
 .star {
   background-color: rgb(0, 149, 149);
@@ -25,6 +24,17 @@ html {
   will-change: filter; 
   transition: 1s ease;
 }
+
+/* .star {
+  background-color: rgb(0, 149, 149);
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(300px);
+  will-change: filter;
+  transition: 1s ease;
+  width: 50%;
+  padding-top: 50%;
+} */
 
 @supports (-moz-appearance: none) {
 .star {
