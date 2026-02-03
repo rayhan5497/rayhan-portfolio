@@ -250,7 +250,7 @@
     background-color: #00000029;
     border: 24px solid transparent;
     border-radius: 15px;
-    transition: 300ms ease-in-out;
+    /* transition: 300ms ease-in-out; */
   }
 
   .manuButtonContainedContainer.open {
@@ -259,7 +259,7 @@
     background-color: #00000029;
     border: 24px solid transparent;
     border-radius: 15px;
-    transition: 300ms ease-in-out;
+    /* transition: 300ms ease-in-out; */
   }
 
   .manuButtonContainedContainer.open:hover {
@@ -282,7 +282,6 @@
     border: solid 1px rgba(255, 255, 255, 0.219);
     padding: 10px;
     margin: -23px;
-    transition: 300ms ease-in-out;
     position: relative;
     z-index: 500;
   }
@@ -304,7 +303,6 @@
     width: 25px;
     height: 36px;
     cursor: pointer;
-    transition: 300ms ease-in-out;
     transition-delay: 0ms;
     margin: -12px 0 0 -12px;
     padding: 11px 14px 11px 18px;
@@ -336,7 +334,6 @@
     transform: translate(0px, -12px) rotate(135deg);
   }
 
-
   .manuButton.open:hover>.bar {
     background-color: rgba(255, 0, 0, 0.979);
   }
@@ -345,80 +342,48 @@
     background-color: rgba(30, 255, 0, 0.849);
   }
 
-  .navManuContainer.open {
-    transform: translateX(58px) translateY(58px);
-    margin: 0px;
-    padding: 0px;
-    width: 290px;
-    height: 400px;
-    transition: 300ms ease-in-out;
-    z-index: 400;
-  }
 
   .navManuContainer {
-    transform: translateX(65px) translateY(63px);
+    transform: translateX(58px) translateY(58px);
     background-color: rgba(0, 255, 255, 0.308);
     display: flex;
     position: absolute;
-    padding: 5px;
-    margin: 0px;
-    width: 0;
-    height: 0;
     border-radius: 15px;
     visibility: hidden;
-    transition: 300ms ease-in-out;
     z-index: 300;
   }
 
   .navManu.open {
-    transform: translateX(-1px) translateY(-1px);
+    transform: scale(1);
     font-size: 20px;
-    padding: 40px 0px 180px 25px;
     display: flex;
     position: relative;
-    width: 300px;
-    height: 250px;
     visibility: visible;
     box-shadow: 0 0 20px 5px rgba(255, 255, 255, 0.288);
     background-color: #000000;
     border-radius: 18px;
-    transition: 300ms ease-in-out;
+    transition: all 0.5s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+    transform-origin: top left;
+  }
+
+
+  .navManu {
+    transform: scale(0);
+    transition: all 0.5s cubic-bezier(0.68, -0.55, 0.27, 1.55);
   }
 
   .navManu.open:hover {
     box-shadow: 0 0 15px 5px rgba(0, 179, 255, 0.705);
   }
 
-  .navManu {
-    transform: translateX(0px) translateY(0px);
-    position: relative;
-    top: 0;
-    left: 0;
-    font-size: 0px;
-    width: 0px;
-    height: 0px;
-    border-radius: 20px;
-    padding: 0px;
-    transition: 300ms ease-in-out;
-  }
-
-
-
-  .navManu.open ul {
-    transform: translateX(49px) translateY(16px);
-  }
-
   .navManu ul {
     transform: translateX(0px) translateY(0px);
-    margin: 0px;
-    padding: 0;
-    transition: 300ms ease-in-out;
     display: block;
     justify-content: space-evenly;
-    list-style: outside;
     background-color: transparent;
     border-radius: 10px;
     font-weight: normal;
+    padding: 50px;
   }
 
   .navManu .navUl1 {
@@ -429,28 +394,16 @@
     display: block;
   }
 
-  .navManu.open>ul>li {
+  .navManu>ul>li {
     box-shadow: 0 0 10px 2px rgba(255, 255, 255, 0.288);
     background-color: #000000;
     border: 10px solid transparent;
     border-radius: 15px;
-    transition: 400ms ease-in-out;
-    font-size: 20px;
-    width: fit-content;
-    height: fit-content;
+    font-size: 18px;
     margin: 22px;
     opacity: 1;
     padding: 0;
-  }
-
-  .navManu ul>li {
-    border: 0px solid transparent;
-    border-radius: 15px;
-    transition: 100ms ease-in-out;
-    width: fit-content;
-    font-size: 0px;
-    margin: 0px;
-    opacity: 0;
+    list-style: outside;
   }
 
   .navManu li:hover::after {

@@ -18,7 +18,29 @@ menuButtonContainer.addEventListener('click', () => {
   menuButtonContainer.classList.toggle('open');
 });
 
+const selectors = [
+  '.manuAndNavContainer',
+  '.headLine',
+  '.imgAndBottomLine',
+  '.mainBoxContainer',
+  '.footer',
+].map((className) => document.querySelector(className));
+
 document.addEventListener('DOMContentLoaded', function () {
+  // Entry transition
+  setTimeout(() => {
+    for (const [index, item] of selectors.entries()) {
+      if (!item) continue;
+      // item.style.transitionDelay = `${index * 0.2}s`;
+      item.style.transitionDelay = `${index * 0.15}s`;
+      item.style.transform = 'scale(1)';
+      item.style.opacity = '1';
+    }
+  }, 100);
+  setTimeout(() => {
+    window.scrollBy({ top: -window.innerHeight, behavior: 'smooth' });
+  }, 100);
+
   // FOR TYPE WRITER LINE
   const roles = ['Front-End Developer', 'UI/UX Designer', 'Virtual Craftsman'];
   let roleIndex = 0;
@@ -114,6 +136,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
   const header = document.querySelector('header');
   const manuAndNav = document.querySelector('.manuAndNavContainer');
+  const navMenuBtns = document.querySelector('.navManu').querySelectorAll('li');
 
   const mainAndFooter = document.querySelector('.mainAndFooter');
   const starContainer = document.querySelectorAll('.starContainer');
@@ -127,12 +150,23 @@ document.addEventListener('DOMContentLoaded', function () {
   const serviceSlides = [professional, upToDateDesign, responsiveAndSecure];
 
   // ======= STYLE HELPERS =======
-  function applyTransition(element, enterFrom = 'bottom') {
+  function showWithTransition(element, enterFrom = 'bottom') {
     const footer = document.querySelector('footer');
     if (element.id === 'connect') {
-      footer.style.display = 'none';
+      footer.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
+      footer.style.transform = 'translateY(100px)';
+      footer.style.opacity = '0';
+      setTimeout(() => {
+        footer.style.display = 'none';
+      }, 500);
     } else if (footer.style.display === 'none') {
       footer.style.display = 'flex';
+      requestAnimationFrame(() => {
+        requestAnimationFrame(() => {
+          footer.style.transform = 'translateY(0px)';
+          footer.style.opacity = '1';
+        });
+      });
     }
     element.style.display = 'flex';
     element.style.transition = 'none';
@@ -159,18 +193,30 @@ document.addEventListener('DOMContentLoaded', function () {
     }, 500);
   }
 
+  function toggleNavBtnColor(index) {
+    for (const btn of navMenuBtns) {
+      if (btn.dataset.name === sections[index].id) {
+        btn.style.background = '#ffffff3b';
+      } else {
+        btn.style.background = '';
+      }
+    }
+  }
+
   // ======= UTILS =======
-  function showSection(index) {
+  function showSection(index, enterFrom) {
+    toggleNavBtnColor(index);
+
     sections.forEach((sec, i) => {
       if (i === index) {
-        applyTransition(sec, 'bottom');
+        showWithTransition(sec, enterFrom === 'bottom' ? 'bottom' : 'top');
       } else if (sec.style.display !== 'none') {
-        hideWithTransition(sec, 'top');
+        hideWithTransition(sec, enterFrom === 'bottom' ? 'top' : 'bottom');
       }
     });
     if (sections[index] === service) {
       inServiceMode = true;
-      showServiceSlide(0);
+      showServiceSlide(serviceSlideIndex);
     } else {
       inServiceMode = false;
       updateStarColors();
@@ -244,15 +290,40 @@ document.addEventListener('DOMContentLoaded', function () {
         moveToNextSection();
       }
     } else if (direction === 'up') {
-      window.scrollBy({ top: -window.innerHeight, behavior: 'smooth' });
+      if (inServiceMode) {
+        const nextIndex = serviceSlideIndex - 1;
+        if (nextIndex >= 0 && nextIndex < serviceSlides.length) {
+          showServiceSlide(nextIndex);
+        } else {
+          inServiceMode = false;
+          moveToPrevSection();
+        }
+      } else {
+        moveToPrevSection();
+      }
     }
 
     setTimeout(() => (isScrolling = false), 500);
   }
 
   function moveToNextSection() {
-    currentSectionIndex = (currentSectionIndex + 1) % sections.length;
-    showSection(currentSectionIndex);
+    currentSectionIndex = currentSectionIndex + 1;
+
+    if (currentSectionIndex < sections.length) {
+      showSection(currentSectionIndex, (enterFrom = 'bottom'));
+    } else {
+      currentSectionIndex = sections.length - 1;
+    }
+  }
+  function moveToPrevSection() {
+    currentSectionIndex = currentSectionIndex - 1;
+
+    if (currentSectionIndex >= 0) {
+      showSection(currentSectionIndex, (enterFrom = 'top'));
+    } else {
+      currentSectionIndex = 0;
+      window.scrollBy({ top: -window.innerHeight, behavior: 'smooth' });
+    }
   }
 
   // ======= EVENT BINDING =======
@@ -292,6 +363,7 @@ document.addEventListener('DOMContentLoaded', function () {
     touchStartY = e.touches[0].clientY;
   });
   header.addEventListener('touchmove', (e) => {
+    e.preventDefault();
     const touchMoveY = e.touches[0].clientY;
     if (touchMoveY < touchStartY && !isScrolling) {
       isScrolling = true;
@@ -306,12 +378,14 @@ document.addEventListener('DOMContentLoaded', function () {
   mainAndFooter.addEventListener(
     'touchmove',
     (e) => {
+      e.preventDefault();
       const touchMoveY = e.touches[0].clientY;
       if (touchMoveY < touchStartY) {
         handleScroll('down');
       } else {
         handleScroll('up');
         isSecondPage = false;
+        console.log('touch');
       }
     },
     { passive: false }
@@ -362,9 +436,6 @@ document.addEventListener('DOMContentLoaded', function () {
   showSection(currentSectionIndex);
 
   //=======Navigate with buttons=======
-  const navManu = document.querySelector('.navManu');
-  const li = navManu.querySelectorAll('li');
-
   function navigatePage(event) {
     isSecondPage = true;
     event.preventDefault();
@@ -382,8 +453,8 @@ document.addEventListener('DOMContentLoaded', function () {
     window.scrollBy({ top: window.innerHeight, behavior: 'smooth' });
   }
 
-  li.forEach((li) => {
-    li.addEventListener('click', (e) => navigatePage(e));
+  navMenuBtns.forEach((btn) => {
+    btn.addEventListener('click', (e) => navigatePage(e));
   });
 });
 

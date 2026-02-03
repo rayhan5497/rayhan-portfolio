@@ -2,10 +2,22 @@ body {
   overflow-y: hidden;
   overflow-x: hidden;
 }
+
 html {
   overflow-x: hidden;
 }
 
+.blur-overlay {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+  backdrop-filter: blur(200px);
+  z-index: 1;
+  will-change: filter;
+}
 
 .starContainer {
   position: absolute;
@@ -20,26 +32,13 @@ html {
   width: 500px;
   position: absolute;
   border-radius: 50%;
-  filter: blur(300px); 
-  will-change: filter; 
   transition: 1s ease;
+  opacity: 0.6;
 }
 
-/* .star {
-  background-color: rgb(0, 149, 149);
-  position: absolute;
-  border-radius: 50%;
-  filter: blur(300px);
-  will-change: filter;
-  transition: 1s ease;
-  width: 50%;
-  padding-top: 50%;
-} */
 
 @supports (-moz-appearance: none) {
-.star {
-  filter: blur(500px); 
-  opacity: 0.5;
-  box-shadow: 0 0 500px rgb(0, 149, 149);
-}
+  .starContainer {
+    opacity: 0.8;
+  }
 }
