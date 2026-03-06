@@ -10,16 +10,16 @@
 }
 
 header {
-    height: 100vh;
+    height: 100dvh;
     color: aliceblue;
-    width: 100vw;
+    width: 100dvw;
     display: flex;
     flex-direction: column;
 }
 
 .manuAndNavContainer {
     position: fixed;
-    width: 100vw;
+    width: 100dvw;
     z-index: 9999;
 }
 
@@ -96,7 +96,7 @@ header {
     align-items: center;
     align-content: center;
     text-align: center;
-    height: 70vh;
+    height: 70dvh;
     z-index: 2;
     pointer-events: none;
     margin-top: 200px;
@@ -117,7 +117,7 @@ header {
 }
 
 .headLineImgPair h1 {
-    font-size: 5vw;
+    font-size: 5dvw;
     margin: 10px 40px 20px 40px;
     font-family: "Italiana", sans-serif;
     letter-spacing: 5px;
@@ -159,8 +159,8 @@ header {
     width: 100%;
     position: absolute;
     transform: rotate(-8deg);
-    width: clamp(300px, 50vw, 425px);
-    height: clamp(300px, 50vw, 425px);
+    width: clamp(300px, 50dvw, 425px);
+    height: clamp(300px, 50dvw, 425px);
     pointer-events: all;
     /* background: rgba(173, 216, 230, 0.281); */
     /* filter: drop-shadow(0 0 6px rgb(235, 235, 235)) brightness(1.1); */
@@ -224,7 +224,7 @@ header {
 
 .bottomLine {
     position: relative;
-    font-size: 3.5vw;
+    font-size: 3.5dvw;
     margin: 0;
     width: 100%;
     height: 0;
@@ -259,7 +259,7 @@ header {
 
 
 .mainBoxContainer {
-  height: 100vh;
+  height: 100dvh;
   height: 100%;
   width: 100%;
 }
@@ -310,7 +310,7 @@ header {
 }
 
 .mainAndFooter {
-  height: 100vh;
+  height: 100dvh;
   z-index: 999;
   position: relative;
   align-content: center;
@@ -467,7 +467,7 @@ footer p {
 
 /*=======PROJECTS=======*/
 #projects {
-    width: 100vw;
+    width: 100dvw;
     padding: 0;
     z-index: 9999;
     /* position: relative; */
@@ -569,7 +569,7 @@ footer p {
 
 /*=======SERVICE=======*/
 #service {
-    width: 100vw;
+    width: 100dvw;
     padding: 0;
     z-index: 9999;
     position: relative;
@@ -589,7 +589,7 @@ footer p {
 
 /*=======TOOLS=======*/
 #tools {
-    width: 100vw;
+    width: 100dvw;
     padding: 0;
     z-index: 9999;
     /* position: relative; */
@@ -628,7 +628,7 @@ footer p {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    width: 90vw;
+    width: 90dvw;
     max-width: 800px;
     filter: drop-shadow(28px 27px 14px rgba(0, 0, 0, 0.637));
 }
@@ -664,7 +664,7 @@ footer p {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: 100vw;
+    width: 100dvw;
     position: absolute;
     display: none;
 }
@@ -710,7 +710,7 @@ footer p {
 
 .aboutDetailsContainer {
     display: flex;
-    width: 68vw;
+    width: 68dvw;
 }
 
 
@@ -727,7 +727,7 @@ footer p {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: 100vw;
+    width: 100dvw;
     position: absolute;
     display: none;
 }
@@ -747,7 +747,7 @@ footer p {
     border-radius: 15px;
     padding: 25px;
     border: 1px solid #ffffff47;
-    width: 35vw;
+    width: 35dvw;
     max-width: 500px;
 }
 

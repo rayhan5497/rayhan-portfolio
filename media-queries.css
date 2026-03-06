@@ -112,7 +112,7 @@
 
   /*=====PROJECT SECTION=====*/
   #projects {
-    width: 70vw;
+    width: 70dvw;
   }
 
   .mainBox dotlottie-player {
@@ -156,7 +156,7 @@
   }
 
   .toolsContainer {
-    width: 100vw;
+    width: 100dvw;
     padding: 0;
   }
 
@@ -184,7 +184,7 @@
   }
 
   .aboutDetailsContainer {
-    width: 80vw;
+    width: 80dvw;
   }
 
   #about p {
@@ -449,7 +449,7 @@
   /*=====ABOUT SECTION=====*/
   .aboutDetailsContainer {
     flex-direction: column;
-    width: 90vw;
+    width: 90dvw;
   }
 
   .aboutDetails {
@@ -466,15 +466,15 @@
   /*=====CONNECT SECTION=====*/
   #connect .form,
   .connectLinks {
-    width: 50vw;
+    width: 50dvw;
   }
 }
 
 
 @media (max-width: 1000px) {
   .iconsContainer {
-    width: clamp(250px, 33vw, 500px);
-    height: clamp(250px, 33vw, 500px);
+    width: clamp(250px, 33dvw, 500px);
+    height: clamp(250px, 33dvw, 500px);
   }
 
   .imgAndBottomLine img {
@@ -602,7 +602,7 @@
 
   /*========PROJECTS SECTION========*/
   #projects {
-    width: 95vw;
+    width: 95dvw;
   }
 
   .mainVideoPair {
@@ -653,7 +653,7 @@
   }
 
   .aboutDetailsContainer {
-    width: 90vw;
+    width: 90dvw;
   }
 
   #about {
@@ -671,7 +671,7 @@
   }
 
   #connect .form {
-    width: 110vw;
+    width: 110dvw;
   }
 
   #connect {
