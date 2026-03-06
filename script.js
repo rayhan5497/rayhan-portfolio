@@ -42,7 +42,7 @@ document.addEventListener('DOMContentLoaded', function () {
   }, 100);
 
   // FOR TYPE WRITER LINE
-  const roles = ['Front-End Developer', 'UI/UX Designer', 'Virtual Craftsman'];
+  const roles = ['Full-Stack Developer', 'UI/UX Designer', 'Virtual Craftsman'];
   let roleIndex = 0;
   let text = roles[roleIndex];
   let index = 0;
